@@ -1,9 +1,10 @@
 const express = require("express");
+const path = require("path");
 const fs = require("fs");
 const app = express();
 const PORT = 4000;
 
-const rootHTMLPath = "html_files/rootHTML.html";
+const rootHTMLPath = path.join(__dirname, "html_files/rootHTML.html");
 
 app.get("/home", (req, res) => {
   res.status(200).send("Home sweet Home sweet !");
