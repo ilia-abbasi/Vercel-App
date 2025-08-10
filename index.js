@@ -11,6 +11,8 @@ const ssimionHTMLPath = path.join(__dirname, "html_files/ssimion.html");
 const theHTMLPath = path.join(__dirname, "html_files/the.html");
 const path2HTMLPath = path.join(__dirname, "html_files/path2.html");
 const facilityHTMLPath = path.join(__dirname, "html_files/facility.html");
+const lolHTMLPath = path.join(__dirname, "html_files/lol.html");
+const truthHTMLPath = path.join(__dirname, "html_files/truth.html");
 
 // Handling different routes
 
@@ -35,10 +37,20 @@ app.get("/path2", (req, res) => {
 });
 
 app.get("/totallynotasecretfacility", (req, res) => {
+  // facility
   const content = fs.readFileSync(facilityHTMLPath, "utf8");
   res.status(404).type("html").send(content);
 });
 
+app.get("/lol", (req, res) => {
+  const content = fs.readFileSync(lolHTMLPath, "utf8");
+  res.status(404).type("html").send(content);
+});
+
+app.get("/bybyifbyto", (req, res) => {
+  const content = fs.readFileSync(truthHTMLPath, "utf8");
+  res.status(404).type("html").send(content);
+});
 // Log to show server is running
 
 app.listen(PORT, () => {
