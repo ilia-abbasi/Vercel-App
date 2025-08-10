@@ -1,13 +1,17 @@
-const express = require('express');
+const express = require("express");
+const fs = require("fs");
 const app = express();
 const PORT = 4000;
 
-app.get('/home', (req, res) => {
-  res.status(200).json('Welcome, your app is working well');
+const rootHTMLPath = "html_files/rootHTML.html";
+
+app.get("/home", (req, res) => {
+  res.status(200).send("Home sweet Home sweet !");
 });
 
-app.get('/', (req, res) => {
-  res.status(200).json('Welcome, your app is not working well');
+app.get("/", (req, res) => {
+  const content = fs.readFileSync(rootHTMLPath, "utf8");
+  res.status(200).type("html").send(content);
 });
 
 app.listen(PORT, () => {
