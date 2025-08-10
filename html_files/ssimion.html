@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Mission (Alaska)</title>
+  </head>
+
+  <body>
+    <h1 id="al">Welcome to Alaska!!!</h1>
+    <p id="as">
+      <span style="color: red">Karkas</span>: This region is very cold, so cold
+      that the background is literally white because of snow.<br />
+      This makes it hard to find white objects on the ground. I usually try to
+      not bring any white objects with me<br />
+      but when the boss says so I have no choice.
+    </p>
+    <p id="ka">Anyway where the **** are we going?</p>
+    <p id="hehe" style="color: white"></p>
+  </body>
+  <script>
+    const en_1 = "V2VsY29tZSB0byBBbGFza2EhISE=";
+    const en_2 = "QW55d2F5IHdoZXJlIHRoZSAqKioqIGFyZSB3ZSBnb2luZz8=";
+    const en_3 = "WW91OiBUbyAvdGhl";
+
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("al").innerHTML = atob(en_1);
+      document.getElementById("ka").innerHTML = atob(en_2);
+      document.getElementById("hehe").innerHTML = atob(en_3);
+    });
+  </script>
+</html>
