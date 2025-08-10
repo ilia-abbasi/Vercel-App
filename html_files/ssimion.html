@@ -13,18 +13,23 @@
       not bring any white objects with me<br />
       but when the boss says so I have no choice.
     </p>
-    <p id="ka">Anyway where the **** are we going?</p>
+    <p id="ka">
+      <span style="color: red">Karkas</span>: Anyway where the **** are we
+      going?
+    </p>
     <p id="hehe" style="color: white"></p>
   </body>
   <script>
-    const en_1 = "V2VsY29tZSB0byBBbGFza2EhISE=";
-    const en_2 = "QW55d2F5IHdoZXJlIHRoZSAqKioqIGFyZSB3ZSBnb2luZz8=";
-    const en_3 = "WW91OiBUbyAvdGhl";
+    const enc_1 = "V2VsY29tZSB0byBBbGFza2EhISE=";
+    const enc_2_1 = "PHNwYW4gc3R5bGU9ImNvbG9yOiByZWQiPkthcmthczwvc3Bhb";
+    const enc_2_2 = "j46IEFueXdheSB3aGVyZSB0aGUgKioqKiBhcmUgd2UgZ29pbmc/";
+    const enc_2 = enc_2_1 + enc_2_2;
+    const enc_3 = "WW91OiBUbyAvdGhl";
 
     window.addEventListener("DOMContentLoaded", () => {
-      document.getElementById("al").innerHTML = atob(en_1);
-      document.getElementById("ka").innerHTML = atob(en_2);
-      document.getElementById("hehe").innerHTML = atob(en_3);
+      document.getElementById("al").innerHTML = atob(enc_1);
+      document.getElementById("ka").innerHTML = atob(enc_2);
+      document.getElementById("hehe").innerHTML = atob(enc_3);
     });
   </script>
 </html>
