@@ -13,6 +13,7 @@ const path2HTMLPath = path.join(__dirname, "html_files/path2.html");
 const facilityHTMLPath = path.join(__dirname, "html_files/facility.html");
 const lolHTMLPath = path.join(__dirname, "html_files/lol.html");
 const truthHTMLPath = path.join(__dirname, "html_files/truth.html");
+const insidefacilHTMLPath = path.join(__dirname, "html_files/insidefacil.html");
 
 // Handling different routes
 
@@ -51,6 +52,12 @@ app.get("/bybyifbytoby", (req, res) => {
   const content = fs.readFileSync(truthHTMLPath, "utf8");
   res.status(404).type("html").send(content);
 });
+
+app.get("/insidefacil", (req, res) => {
+  const content = fs.readFileSync(insidefacilHTMLPath, "utf8");
+  res.status(404).type("html").send(content);
+});
+
 // Log to show server is running
 
 app.listen(PORT, () => {
