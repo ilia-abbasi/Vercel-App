@@ -47,7 +47,7 @@ app.get("/lol", (req, res) => {
   res.status(404).type("html").send(content);
 });
 
-app.get("/bybyifbyto", (req, res) => {
+app.get("/bybyifbytoby", (req, res) => {
   const content = fs.readFileSync(truthHTMLPath, "utf8");
   res.status(404).type("html").send(content);
 });
