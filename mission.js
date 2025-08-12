@@ -6,54 +6,54 @@ const PORT = 4000;
 
 // HTML file paths
 
-const rootHTMLPath = path.join(__dirname, "html_files/root.html");
-const ssimionHTMLPath = path.join(__dirname, "html_files/ssimion.html");
-const theHTMLPath = path.join(__dirname, "html_files/the.html");
-const path2HTMLPath = path.join(__dirname, "html_files/path2.html");
-const facilityHTMLPath = path.join(__dirname, "html_files/facility.html");
-const lolHTMLPath = path.join(__dirname, "html_files/lol.html");
-const truthHTMLPath = path.join(__dirname, "html_files/truth.html");
-const insidefacilHTMLPath = path.join(__dirname, "html_files/insidefacil.html");
+const rootHTMLPath = path.join(__dirname, "mission_html_files/root.html");
+const ssimionHTMLPath = path.join(__dirname, "mission_html_files/ssimion.html");
+const theHTMLPath = path.join(__dirname, "mission_html_files/the.html");
+const path2HTMLPath = path.join(__dirname, "mission_html_files/path2.html");
+const facilityHTMLPath = path.join(__dirname, "mission_html_files/facility.html");
+const lolHTMLPath = path.join(__dirname, "mission_html_files/lol.html");
+const truthHTMLPath = path.join(__dirname, "mission_html_files/truth.html");
+const insidefacilHTMLPath = path.join(__dirname, "mission_html_files/insidefacil.html");
 
 // Handling different routes
 
-app.get("/", (req, res) => {
+app.get("/mission", (req, res) => {
   const content = fs.readFileSync(rootHTMLPath, "utf8");
   res.status(200).type("html").send(content);
 });
 
-app.get("/ssimion", (req, res) => {
+app.get("/mission/ssimion", (req, res) => {
   const content = fs.readFileSync(ssimionHTMLPath, "utf8");
   res.status(200).type("html").send(content);
 });
 
-app.get("/the", (req, res) => {
+app.get("/mission/the", (req, res) => {
   const content = fs.readFileSync(theHTMLPath, "utf8");
   res.status(200).type("html").send(content);
 });
 
-app.get("/path2", (req, res) => {
+app.get("/mission/path2", (req, res) => {
   const content = fs.readFileSync(path2HTMLPath, "utf8");
   res.status(404).type("html").send(content);
 });
 
-app.get("/totallynotasecretfacility", (req, res) => {
+app.get("/mission/totallynotasecretfacility", (req, res) => {
   // facility
   const content = fs.readFileSync(facilityHTMLPath, "utf8");
   res.status(404).type("html").send(content);
 });
 
-app.get("/lol", (req, res) => {
+app.get("/mission/lol", (req, res) => {
   const content = fs.readFileSync(lolHTMLPath, "utf8");
   res.status(404).type("html").send(content);
 });
 
-app.get("/bybyifbytoby", (req, res) => {
+app.get("/mission/bybyifbytoby", (req, res) => {
   const content = fs.readFileSync(truthHTMLPath, "utf8");
   res.status(404).type("html").send(content);
 });
 
-app.get("/insidefacil", (req, res) => {
+app.get("/mission/insidefacil", (req, res) => {
   const content = fs.readFileSync(insidefacilHTMLPath, "utf8");
   res.status(404).type("html").send(content);
 });
