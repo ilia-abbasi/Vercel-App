@@ -10,10 +10,16 @@ const rootHTMLPath = path.join(__dirname, "mission_html_files/root.html");
 const ssimionHTMLPath = path.join(__dirname, "mission_html_files/ssimion.html");
 const theHTMLPath = path.join(__dirname, "mission_html_files/the.html");
 const path2HTMLPath = path.join(__dirname, "mission_html_files/path2.html");
-const facilityHTMLPath = path.join(__dirname, "mission_html_files/facility.html");
+const facilityHTMLPath = path.join(
+  __dirname,
+  "mission_html_files/facility.html"
+);
 const lolHTMLPath = path.join(__dirname, "mission_html_files/lol.html");
 const truthHTMLPath = path.join(__dirname, "mission_html_files/truth.html");
-const insidefacilHTMLPath = path.join(__dirname, "mission_html_files/insidefacil.html");
+const insidefacilHTMLPath = path.join(
+  __dirname,
+  "mission_html_files/insidefacil.html"
+);
 
 // Handling different routes
 
