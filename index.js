@@ -1,8 +1,16 @@
 const http = require("http");
 
-http
-  .createServer(function (req, res) {
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.end("Hello World!");
-  })
-  .listen(4000);
+const server = http.createServer(handleRequest).listen(4000);
+
+function handleRequest(req, res) {
+  if (req.url === "/") {
+    res.end("homepage");
+    return;
+  }
+  if (req.url === "/about") {
+    res.end("abbout");
+    return;
+  }
+  res.write("404");
+  res.end();
+}
