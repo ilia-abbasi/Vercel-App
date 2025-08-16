@@ -1,6 +1,10 @@
 const http = require("http");
+const port = 4000;
+const server = http.createServer(handleRequest);
 
-const server = http.createServer(handleRequest).listen(4000);
+server.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});
 
 function handleRequest(req, res) {
   if (req.url === "/") {
